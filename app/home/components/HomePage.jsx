@@ -4,11 +4,12 @@ import { useEffect } from "react";
 import Navbar from "./Navbar";
 
 export default function HomePage() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const [user, setUser] = useState(null);
 
     useEffect(() => {
-        if (!user) {
-            window.location.href = '/';
+        const userData = sessionStorage.getItem("user");
+        if (userData) {
+            setUser(JSON.parse(userData));
         }
     }, []);
 
