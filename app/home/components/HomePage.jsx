@@ -1,6 +1,6 @@
 "use client";
 import { Card } from "@/components/ui/card";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 
 export default function HomePage() {
